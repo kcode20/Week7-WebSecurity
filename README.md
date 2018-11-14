@@ -21,18 +21,26 @@ Time spent: **X** hours spent in total
   - Note that the error is not the same, "admin" is a valid username.
   - Try to find the valid password by submitting "admin". You should now be logged into the wordpress admin console.
 - [x] Affected source code:
-  - [Link 1](https://core.trac.wordpress.org/browser/branches/4.2/src/wp-login.php)
+  - [Login Source Code - V4.2](https://core.trac.wordpress.org/browser/branches/4.2/src/wp-login.php)
 
-2. (Required) Vulnerability Name or ID
+2. (Required) XSS Vulnerability - Media Page
 
-- [ ] Summary:
-  - Vulnerability types:
-  - Tested in version:
-  - Fixed in version:
-- [ ] GIF Walkthrough:
-- [ ] Steps to recreate:
+- [x] Summary:
+  - Vulnerability types: XSS
+  - Tested in version: 4.2
+  - Fixed in version: 4.2.4
+- [x] GIF Walkthrough:
+      <img src='XSSVulnerability.gif' title='XSSVulnerability' />
+- [x] Steps to recreate:
+  - Go to the Media tab in Wordpress
+  - Select 'Create New'
+  - Upload a Picture
+  - Click on the newly uploaded Picture
+  - In the title field, insert the following: `filename<img src=a onerror=alert('123')>.png`
+  - Now select the "View attachment page" button at the bottom of the form
+  - When you are redirected to the attachment page, this should trigger the onerror in the image.
 - [ ] Affected source code:
-  - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
+  - [Media Source Code - V4.2](https://core.trac.wordpress.org/browser/branches/4.2/src/wp-admin/includes/media.php)
 
 3. (Required) Vulnerability Name or ID
 
