@@ -49,9 +49,9 @@ Time spent: **X** hours spent in total
   - Tested in version: 4.2
   - Fixed in version: 4.2.4
 - [x] GIF Walkthrough:
-      <img src='XSSVulnerability#2.gif' title='XSSVulnerability#2' />
+      <img src='XSSVulnerability2.gif' title='XSSVulnerability2' />
 - [x] Steps to recreate:
-  - Go to the Comment Sectionon one of the posts
+  - Go to the Comment Section on one of the posts
   - Post: `I can do a lot of bad things here <img src=a onerror=alert('malicious intent')>.png`
   - Select the "Post Comment" button
   - This should trigger the onerror in the image and alert you of "malicious intent"
