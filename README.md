@@ -42,16 +42,21 @@ Time spent: **X** hours spent in total
 - [x] Affected source code:
   - [Media Source Code - V4.2](https://core.trac.wordpress.org/browser/branches/4.2/src/wp-admin/includes/media.php)
 
-3. (Required) Vulnerability Name or ID
+3. (Required) XSS Vulnerability - Comment Section
 
-- [ ] Summary:
-  - Vulnerability types:
-  - Tested in version:
-  - Fixed in version:
-- [ ] GIF Walkthrough:
-- [ ] Steps to recreate:
-- [ ] Affected source code:
-  - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
+- [x] Summary:
+  - Vulnerability types: XSS
+  - Tested in version: 4.2
+  - Fixed in version: 4.2.4
+- [x] GIF Walkthrough:
+      <img src='XSSVulnerability#2.gif' title='XSSVulnerability#2' />
+- [x] Steps to recreate:
+  - Go to the Comment Sectionon one of the posts
+  - Post: `I can do a lot of bad things here <img src=a onerror=alert('malicious intent')>.png`
+  - Select the "Post Comment" button
+  - This should trigger the onerror in the image and alert you of "malicious intent"
+- [x] Affected source code:
+  - [Comments in Themes - V4.2](https://core.trac.wordpress.org/browser/branches/4.2/src/wp-includes/theme.php)
 
 4. (Optional) Vulnerability Name or ID
 
