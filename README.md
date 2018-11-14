@@ -39,7 +39,7 @@ Time spent: **X** hours spent in total
   - In the title field, insert the following: `filename<img src=a onerror=alert('123')>.png`
   - Now select the "View attachment page" button at the bottom of the form
   - When you are redirected to the attachment page, this should trigger the onerror in the image.
-- [ ] Affected source code:
+- [x] Affected source code:
   - [Media Source Code - V4.2](https://core.trac.wordpress.org/browser/branches/4.2/src/wp-admin/includes/media.php)
 
 3. (Required) Vulnerability Name or ID
